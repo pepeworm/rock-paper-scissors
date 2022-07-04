@@ -1,0 +1,12 @@
+1) Link CSS and JS files
+2) Create container for player & bot choices (flexbox) as well as a container below for the 3 choices (rock, paper & scissor)
+3) Player and bot choice boxes should be in one section (display: block;) and choice container should be under it
+4) Increase size of choice container emojis when hovered over (transition property CSS)
+5) In the player and bot choice boxes, emoji should be in the center of the box
+6) Create a modal
+7) Add a transition to the button in the modal
+8) Add functionality to play again button in modal
+9) Bot should come up with rock, paper or scissor when emoji choice is pressed
+10) Player's emoji choice should show up at the same time as bot's emoji choice in their respective containers
+12) Logic to see who won
+13) Modal should be shown and should display who wins or loses

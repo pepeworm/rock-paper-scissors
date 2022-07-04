@@ -1,0 +1,145 @@
+$black: #000000;
+$white: #FFFFFF;
+$background: #1B2430;
+$surface: #51557E;
+$secondary: #816797;
+$primary: #D6D5A8;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: $primary;
+}
+
+body {
+    padding: 3rem 0;
+    background-color: $background;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+button {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.modal-background {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($black, 0.6);
+    display: none;
+
+    &.show {
+        display: flex;
+    }
+
+    .modal {
+        display: none;
+        position: relative;
+        background-color: $surface;
+        padding: 2rem 3rem;
+        border-radius: 0.4rem;
+
+
+        &.show {
+            display: inline-block;
+        }
+        
+        .modal-content {
+            button {
+                margin-top: 1.5rem;
+                padding: 0.4rem 0.6rem;
+                border-radius: 0.4rem;
+                border: 1px solid $primary;
+                background-color: $surface;
+                transition: 100ms background-color linear, 100ms color linear;
+
+                &:hover {
+                    background-color: $primary;
+                    color: $surface;
+                }
+            }
+        }
+    }
+}
+
+.game-container {
+    margin: 5rem 0;
+
+    .choice-display {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .player-choice,
+        .bot-choice {
+            width: 20rem;
+            height: 20rem;
+            background-color: $surface;
+            border-radius: 0.4rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                position: absolute;
+                top: 1rem;
+            }
+
+            span {
+                font-size: 5rem;
+            }
+        }
+
+        .player-choice {
+            margin-right: 5rem;
+        }
+    }
+
+    .choices {
+        h2 {
+            margin: 3rem 0 1rem 0;
+        }
+
+        p {
+            font-size: 2.5rem;
+            display: inline-block;
+            cursor: pointer;
+            background-color: $surface;
+            padding: 0.4rem 0.6rem;
+            border-radius: 0.4rem;
+            transition: 100ms transform linear;
+
+            &:nth-child(3) {
+                margin: 0 1rem;
+            }
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}

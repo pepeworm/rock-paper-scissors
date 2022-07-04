@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #D6D5A8;
+}
+
+body {
+  padding: 3rem 0;
+  background-color: #1B2430;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+button {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.modal-background {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+.modal-background.show {
+  display: flex;
+}
+.modal-background .modal {
+  display: none;
+  position: relative;
+  background-color: #51557E;
+  padding: 2rem 3rem;
+  border-radius: 0.4rem;
+}
+.modal-background .modal.show {
+  display: inline-block;
+}
+.modal-background .modal .modal-content button {
+  margin-top: 1.5rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.4rem;
+  border: 1px solid #D6D5A8;
+  background-color: #51557E;
+  transition: 100ms background-color linear, 100ms color linear;
+}
+.modal-background .modal .modal-content button:hover {
+  background-color: #D6D5A8;
+  color: #51557E;
+}
+
+.game-container {
+  margin: 5rem 0;
+}
+.game-container .choice-display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.game-container .choice-display .player-choice,
+.game-container .choice-display .bot-choice {
+  width: 20rem;
+  height: 20rem;
+  background-color: #51557E;
+  border-radius: 0.4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game-container .choice-display .player-choice h2,
+.game-container .choice-display .bot-choice h2 {
+  position: absolute;
+  top: 1rem;
+}
+.game-container .choice-display .player-choice span,
+.game-container .choice-display .bot-choice span {
+  font-size: 5rem;
+}
+.game-container .choice-display .player-choice {
+  margin-right: 5rem;
+}
+.game-container .choices h2 {
+  margin: 3rem 0 1rem 0;
+}
+.game-container .choices p {
+  font-size: 2.5rem;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #51557E;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.4rem;
+  transition: 100ms transform linear;
+}
+.game-container .choices p:nth-child(3) {
+  margin: 0 1rem;
+}
+.game-container .choices p:hover {
+  transform: scale(1.2);
+}/*# sourceMappingURL=styles.css.map */
